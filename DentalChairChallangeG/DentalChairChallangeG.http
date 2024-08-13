@@ -1,0 +1,49 @@
+@DentalChairChallangeG_HostAddress = http://localhost:5271
+
+GET {{DentalChairChallangeG_HostAddress}}/chair/getAll
+Accept: application/json
+
+###
+
+GET {{DentalChairChallangeG_HostAddress}}/chair/getChairById/1
+Accept: application/json
+
+###
+
+POST {{DentalChairChallangeG_HostAddress}}/chair/create
+Accept: application/json
+Content-Type: application/json
+
+{
+	"Number": "111",
+	"Description": "Test5",
+	"IsAvailable": true
+}
+
+###
+
+PUT {{DentalChairChallangeG_HostAddress}}/chair/1
+Accept: application/json
+Content-Type: application/json
+
+{
+	"Number": "225",
+	"Description": "Test11",
+	"IsAvailable": true
+}
+
+###
+
+DELETE {{DentalChairChallangeG_HostAddress}}/chair/5
+
+###
+
+POST {{DentalChairChallangeG_HostAddress}}/chair/allocate
+Accept: application/json
+Content-Type: application/json
+
+{
+  "StartTime": "2024-08-15T08:00:00",
+  "EndTime": "2024-08-15T17:00:00",
+  "IntervalMinutes": 60
+}

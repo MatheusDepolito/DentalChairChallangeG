@@ -1,0 +1,10 @@
+﻿
+namespace BaseLibrary.DTOs
+{
+    public class UpdateChairDTO
+    {
+        public string? Number { get; set; } = string.Empty;
+        public string? Description { get; set; }
+        public bool? IsAvailable { get; set; }
+    }
+}
